@@ -23,19 +23,19 @@ from opencensus.trace.tracer import Tracer
 
 # Logging
 logger = logging.getLogger(__name__)
-handler = AzureLogHandler(connection_string='InstrumentationKey=d1c55230-7dfe-4a54-9b80-81a7f0e391a8')
+handler = AzureLogHandler(connection_string='InstrumentationKey=d27d8e93-0f56-45c2-b1cd-d57e48520a54')
 logger.addHandler(handler)
 logger.setLevel(logging.INFO)
 
 # Metrics
 exporter = metrics_exporter.new_metrics_exporter(
 enable_standard_metrics=True,
-connection_string='InstrumentationKey=d1c55230-7dfe-4a54-9b80-81a7f0e391a8')
+connection_string='InstrumentationKey=d27d8e93-0f56-45c2-b1cd-d57e48520a54')
 
 # Tracing
 tracer = Tracer(
     exporter=AzureExporter(
-        connection_string='InstrumentationKey=d1c55230-7dfe-4a54-9b80-81a7f0e391a8'),
+        connection_string='InstrumentationKey=d27d8e93-0f56-45c2-b1cd-d57e48520a54'),
     sampler=ProbabilitySampler(1.0),
 )
 
@@ -44,7 +44,7 @@ app = Flask(__name__)
 # Requests
 middleware = FlaskMiddleware(
     app,
-    exporter=AzureExporter(connection_string="InstrumentationKey=d1c55230-7dfe-4a54-9b80-81a7f0e391a8"),
+    exporter=AzureExporter(connection_string="InstrumentationKey=d27d8e93-0f56-45c2-b1cd-d57e48520a54"),
     sampler=ProbabilitySampler(rate=1.0),
 )
 
