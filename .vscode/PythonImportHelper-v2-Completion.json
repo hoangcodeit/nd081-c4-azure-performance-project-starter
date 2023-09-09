@@ -237,11 +237,11 @@
         "documentation": {}
     },
     {
-        "label": "r",
+        "label": "redis_server",
         "kind": 5,
         "importPath": "azure-vote.main",
         "description": "azure-vote.main",
-        "peekOfCode": "r = redis.Redis()\n# Change title to host name to demo NLB\nif app.config['SHOWHOST'] == \"true\":\n    title = socket.gethostname()\n# Init Redis\nif not r.get(button1): r.set(button1,0)\nif not r.get(button2): r.set(button2,0)\n@app.route('/', methods=['GET', 'POST'])\ndef index():\n    if request.method == 'GET':",
+        "peekOfCode": "redis_server = os.environ['REDIS']\n# Redis Connection to another container\ntry:\n   if \"REDIS_PWD\" in os.environ:\n      r = redis.StrictRedis(host=redis_server,\n                        port=6379,\n                        password=os.environ['REDIS_PWD'])\n   else:\n      r = redis.Redis(redis_server)\n   r.ping()",
         "detail": "azure-vote.main",
         "documentation": {}
     }
