@@ -187,7 +187,7 @@
         "kind": 5,
         "importPath": "azure-vote.main",
         "description": "azure-vote.main",
-        "peekOfCode": "logger = logging.getLogger(__name__)\nhandler = AzureLogHandler(connection_string='InstrumentationKey=d27d8e93-0f56-45c2-b1cd-d57e48520a54')\nlogger.addHandler(handler)\nlogger.setLevel(logging.INFO)\n# Metrics\nexporter = metrics_exporter.new_metrics_exporter(\nenable_standard_metrics=True,\nconnection_string='InstrumentationKey=d27d8e93-0f56-45c2-b1cd-d57e48520a54')\n# Tracing\ntracer = Tracer(",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nhandler = AzureLogHandler(connection_string='InstrumentationKey=5c679c51-03fc-4e47-a5f9-d7c4c1694621')\nlogger.addHandler(handler)\nlogger.setLevel(logging.INFO)\n# Metrics\nexporter = metrics_exporter.new_metrics_exporter(\nenable_standard_metrics=True,\nconnection_string='InstrumentationKey=5c679c51-03fc-4e47-a5f9-d7c4c1694621')\n# Tracing\ntracer = Tracer(",
         "detail": "azure-vote.main",
         "documentation": {}
     },
@@ -196,7 +196,7 @@
         "kind": 5,
         "importPath": "azure-vote.main",
         "description": "azure-vote.main",
-        "peekOfCode": "handler = AzureLogHandler(connection_string='InstrumentationKey=d27d8e93-0f56-45c2-b1cd-d57e48520a54')\nlogger.addHandler(handler)\nlogger.setLevel(logging.INFO)\n# Metrics\nexporter = metrics_exporter.new_metrics_exporter(\nenable_standard_metrics=True,\nconnection_string='InstrumentationKey=d27d8e93-0f56-45c2-b1cd-d57e48520a54')\n# Tracing\ntracer = Tracer(\n    exporter=AzureExporter(",
+        "peekOfCode": "handler = AzureLogHandler(connection_string='InstrumentationKey=5c679c51-03fc-4e47-a5f9-d7c4c1694621')\nlogger.addHandler(handler)\nlogger.setLevel(logging.INFO)\n# Metrics\nexporter = metrics_exporter.new_metrics_exporter(\nenable_standard_metrics=True,\nconnection_string='InstrumentationKey=5c679c51-03fc-4e47-a5f9-d7c4c1694621')\n# Tracing\ntracer = Tracer(\n    exporter=AzureExporter(",
         "detail": "azure-vote.main",
         "documentation": {}
     },
@@ -205,7 +205,7 @@
         "kind": 5,
         "importPath": "azure-vote.main",
         "description": "azure-vote.main",
-        "peekOfCode": "exporter = metrics_exporter.new_metrics_exporter(\nenable_standard_metrics=True,\nconnection_string='InstrumentationKey=d27d8e93-0f56-45c2-b1cd-d57e48520a54')\n# Tracing\ntracer = Tracer(\n    exporter=AzureExporter(\n        connection_string='InstrumentationKey=d27d8e93-0f56-45c2-b1cd-d57e48520a54'),\n    sampler=ProbabilitySampler(1.0),\n)\napp = Flask(__name__)",
+        "peekOfCode": "exporter = metrics_exporter.new_metrics_exporter(\nenable_standard_metrics=True,\nconnection_string='InstrumentationKey=5c679c51-03fc-4e47-a5f9-d7c4c1694621')\n# Tracing\ntracer = Tracer(\n    exporter=AzureExporter(\n        connection_string='InstrumentationKey=5c679c51-03fc-4e47-a5f9-d7c4c1694621'),\n    sampler=ProbabilitySampler(1.0),\n)\napp = Flask(__name__)",
         "detail": "azure-vote.main",
         "documentation": {}
     },
@@ -214,7 +214,7 @@
         "kind": 5,
         "importPath": "azure-vote.main",
         "description": "azure-vote.main",
-        "peekOfCode": "tracer = Tracer(\n    exporter=AzureExporter(\n        connection_string='InstrumentationKey=d27d8e93-0f56-45c2-b1cd-d57e48520a54'),\n    sampler=ProbabilitySampler(1.0),\n)\napp = Flask(__name__)\n# Requests\nmiddleware = FlaskMiddleware(\n    app,\n    exporter=AzureExporter(connection_string=\"InstrumentationKey=d27d8e93-0f56-45c2-b1cd-d57e48520a54\"),",
+        "peekOfCode": "tracer = Tracer(\n    exporter=AzureExporter(\n        connection_string='InstrumentationKey=5c679c51-03fc-4e47-a5f9-d7c4c1694621'),\n    sampler=ProbabilitySampler(1.0),\n)\napp = Flask(__name__)\n# Requests\nmiddleware = FlaskMiddleware(\n    app,\n    exporter=AzureExporter(connection_string=\"InstrumentationKey=5c679c51-03fc-4e47-a5f9-d7c4c1694621\"),",
         "detail": "azure-vote.main",
         "documentation": {}
     },
@@ -223,7 +223,7 @@
         "kind": 5,
         "importPath": "azure-vote.main",
         "description": "azure-vote.main",
-        "peekOfCode": "app = Flask(__name__)\n# Requests\nmiddleware = FlaskMiddleware(\n    app,\n    exporter=AzureExporter(connection_string=\"InstrumentationKey=d27d8e93-0f56-45c2-b1cd-d57e48520a54\"),\n    sampler=ProbabilitySampler(rate=1.0),\n)\n# Load configurations from environment or config file\napp.config.from_pyfile('config_file.cfg')\nif (\"VOTE1VALUE\" in os.environ and os.environ['VOTE1VALUE']):",
+        "peekOfCode": "app = Flask(__name__)\n# Requests\nmiddleware = FlaskMiddleware(\n    app,\n    exporter=AzureExporter(connection_string=\"InstrumentationKey=5c679c51-03fc-4e47-a5f9-d7c4c1694621\"),\n    sampler=ProbabilitySampler(rate=1.0),\n)\n# Load configurations from environment or config file\napp.config.from_pyfile('config_file.cfg')\nif (\"VOTE1VALUE\" in os.environ and os.environ['VOTE1VALUE']):",
         "detail": "azure-vote.main",
         "documentation": {}
     },
@@ -232,7 +232,7 @@
         "kind": 5,
         "importPath": "azure-vote.main",
         "description": "azure-vote.main",
-        "peekOfCode": "middleware = FlaskMiddleware(\n    app,\n    exporter=AzureExporter(connection_string=\"InstrumentationKey=d27d8e93-0f56-45c2-b1cd-d57e48520a54\"),\n    sampler=ProbabilitySampler(rate=1.0),\n)\n# Load configurations from environment or config file\napp.config.from_pyfile('config_file.cfg')\nif (\"VOTE1VALUE\" in os.environ and os.environ['VOTE1VALUE']):\n    button1 = os.environ['VOTE1VALUE']\nelse:",
+        "peekOfCode": "middleware = FlaskMiddleware(\n    app,\n    exporter=AzureExporter(connection_string=\"InstrumentationKey=5c679c51-03fc-4e47-a5f9-d7c4c1694621\"),\n    sampler=ProbabilitySampler(rate=1.0),\n)\n# Load configurations from environment or config file\napp.config.from_pyfile('config_file.cfg')\nif (\"VOTE1VALUE\" in os.environ and os.environ['VOTE1VALUE']):\n    button1 = os.environ['VOTE1VALUE']\nelse:",
         "detail": "azure-vote.main",
         "documentation": {}
     },
